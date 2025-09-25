@@ -1,0 +1,123 @@
+{
+	"info": {
+		"_postman_id": "e83709d7-463b-42d3-992c-7a716690e8a1",
+		"name": "API Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "44186538",
+		"_collection_link": "https://api-team-6080.postman.co/workspace/API-Team-Workspace~1e6866c6-a304-4fc6-879f-26d41437edf6/collection/44186538-e83709d7-463b-42d3-992c-7a716690e8a1?action=share&source=collection_link&creator=44186538"
+	},
+	"item": [
+		{
+			"name": "Ecommerce_backend",
+			"item": [
+				{
+					"name": "Token",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"admin\",\n    \"password\": \"admin\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "/api/token",
+							"path": [
+								"api",
+								"token"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List product",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Add Product to cart",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzU4NzM5MzQyLCJpYXQiOjE3NTg3Mzc1NDIsImp0aSI6IjlkNzNhMDljOWZkZDRmOWJhMDJjZWY0M2YyZmY1MmJjIiwidXNlcl9pZCI6IjEifQ.Ql5HYvJI6ozBTo4rIQPz5mpjGo0PLNX-LDiB2cifU4o",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n    {\"product_id\": 1, \"quantity\": 1},\n    {\"product_id\": 3, \"quantity\": 1}\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/shop/cart/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"shop",
+								"cart",
+								""
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create order",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Orders History",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Pay order",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
